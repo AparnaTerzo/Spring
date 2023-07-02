@@ -40,7 +40,7 @@ public class EventController {
         Event event = new Event();
         model.addAttribute("clubId",clubId);
         model.addAttribute("event",event);
-        return "create-event";
+        return "events-create";
     }
     @PostMapping("/events/{clubId}")
     public String createEvent(@PathVariable("clubId") Long clubId, @ModelAttribute("event")EventDto eventDto, Model model, BindingResult result){
